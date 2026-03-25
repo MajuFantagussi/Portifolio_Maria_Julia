@@ -19,13 +19,15 @@ import './globals.css';
 // Icons Imports
 import { GraduationCap, Briefcase, Trophy, BarChart2, Database } from "lucide-react";
 import {
-  SiPython, SiPostgresql, SiMysql, SiGit, SiJavascript, SiDatabricks, SiFigma
+  SiPython, SiPostgresql, SiMysql, SiGit, SiJavascript, SiDatabricks, SiFigma,
+  SiNextdotjs
 } from "react-icons/si";
-import { FaInstagram, FaJava, FaWhatsapp } from "react-icons/fa";
+import { FaFile, FaFileExcel, FaInstagram, FaJava, FaLanguage, FaLink, FaReact, FaSignLanguage, FaWhatsapp } from "react-icons/fa";
 import { LuGithub, LuLinkedin } from "react-icons/lu";
 
 import GitHubButton from "@/components/button/GitHubButtton";
 import LinkedinButton from "@/components/button/LinkedinButton";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -52,12 +54,11 @@ export default function Home() {
             {/* Coluna da esquerda */}
             <div className="text-left md:text-left max-w-xl" data-aos="fade-right">
               <h1 className="text-4xl md:text-5xl font-extrabold text-stone-950 mb-2">
-                Eu sou <span style={{ color: "#6E00B3" }}>Maria Julia</span>,
+                Eu sou <span className="text-4xl md:text-5xl font-extrabold text-stone-950 mb-2" style={{color: "#9333EA"}}>Maria Julia</span> 
               </h1>
+
               {/* Subtítulo */}
-              <h2 className="text-lg md:text-xl font-semibold mb-6" style={{ color: "#a282b7" }}>
-                Analista de Dados Jr.
-              </h2>
+              <h2 className="text-lg md:text-xl font-semibold mb-6" style={{ color: "#a282b7" }}> Analista de Dados Jr. </h2>
               <p className="text-stone-900 leading-relaxed mb-8">
                 Desde 2022, venho construindo minha trajetória na área de dados, unindo formação em Ciência da
                 Computação com experiência prática em ETL, modelagem analítica e visualização de dados.
@@ -71,14 +72,12 @@ export default function Home() {
               <div className="absolute inset-0 rounded-full border-2 border-gray-50"></div>
               {/* TODO: substitua pelo seu ícone em /icons/Icon.svg */}
               <Image
-                src="/icons/Icon.svg"
+                src="/img/Ilustration.png"
                 alt="Maria Julia"
-                width={400}
-                height={400}
+                width={550}
+                height={550}
                 className="z-10 object-contain"
               />
-              <GitHubButton icon={LuGithub} />
-              <LinkedinButton icon={LuLinkedin} />
             </div>
           </div>
         </section>
@@ -87,20 +86,24 @@ export default function Home() {
         <section className="mb-16" id="habilidades" data-aos="fade-up">
           <h2 className="text-3xl text-center font-bold text-stone-950 mb-6 section-spacing">Habilidades</h2>
 
-          <div className="space-y-4 md:space-y-6">
-            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 md:gap-6">
-              <SkillCard icon={Database}     name="SQL"            link="" />
-              <SkillCard icon={SiPython}     name="Python"         link="" />
-              <SkillCard icon={SiPostgresql} name="PostgreSQL"     link="" />
-              <SkillCard icon={SiMysql}      name="MySQL"          link="" />
-              <SkillCard icon={BarChart2}    name="Power BI / DAX" link="" />
-              <SkillCard icon={SiDatabricks} name="Databricks"     link="" />
-              <SkillCard icon={SiGit}        name="Git"            link="" />
-              <SkillCard icon={SiJavascript} name="JavaScript"     link="" />
-              <SkillCard icon={FaJava}       name="Java"           link="" />
-              <SkillCard icon={SiFigma}      name="Figma"          link="" />
-            </div>
+        <div className="space-y-4 md:space-y-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 md:gap-6">
+            <SkillCard icon={Database} name="SQL" link="" />
+            <SkillCard icon={SiPython} name="Python" link="" />
+            <SkillCard icon={BarChart2} name="Power BI / DAX" link="" />
+            <SkillCard icon={SiPostgresql} name="PostgreSQL" link="" />
+            <SkillCard icon={SiMysql} name="MySQL" link="" />
+            <SkillCard icon={SiDatabricks} name="Databricks" link="" />
+            <SkillCard icon={Database} name="Data Modeling" link="" />
+            <SkillCard icon={FaFileExcel} name="Excel" link="" />
+            <SkillCard icon={SiFigma} name="Figma" link="" />
+            <SkillCard icon={FaLanguage} name="Inglês Avançado" link="" />
+            <SkillCard icon={SiJavascript} name="JavaScript" link="" />
+            <SkillCard icon={FaJava} name="Java" link="" />
+            <SkillCard icon={FaReact} name="React" link="" />
+            <SkillCard icon={SiNextdotjs} name="Next.js" link="" />
           </div>
+        </div>
         </section>
 
         {/* Seção de Experiências */}
@@ -112,11 +115,11 @@ export default function Home() {
             FORMAÇÃO ACADÊMICA
           </h4>
           <div className="space-y-6 mb-10">
-            <EducationCard
+            <Link href="https://www.sbv.ifsp.edu.br/bcc"><EducationCard
               title="Bacharelado em Ciências da Computação - Instituto Federal de São Paulo (IFSP)"
               period="2022 - 2025"
               icon={GraduationCap}
-            />
+            /></Link>
           </div>
 
           <h4 className="text-base text-center font-bold mb-6 section-spacing" style={{ color: "#9333EA" }}>
@@ -128,7 +131,7 @@ export default function Home() {
               period="Fev/2025 – Fev/2026"
               description="Participação em processos ETL com consolidação e validação de dados de múltiplas fontes. Estruturação de bases analíticas como fonte da verdade (SSOT) para consumo padronizado entre áreas. Desenvolvimento de dashboards em Power BI com KPIs operacionais e financeiros para suporte à tomada de decisão gerencial. Automação com VBA, reduzindo 75% do tempo operacional e gerando economia anual de R$170 mil."
               icon={Briefcase}
-              link=""
+
             />
           </div>
         </section>
@@ -149,10 +152,12 @@ export default function Home() {
                   para suporte à tomada de decisão.
                 </>
               }
-              image="/icons/TaskRep.svg"
-              icon={LuGithub}
-              link="https://github.com/MajuFantagussi"
-            />
+              image="/icons/TaskRep.png"
+               links={[
+                { icon: SiFigma, url: "https://www.figma.com/design/cYhZP7gImfa9wHJ72raSd8/Prot%C3%B3tipo-de-Telas?node-id=0-1&m=dev&t=qRxtz1rmjDmGR0lj-1" },
+                { icon: FaFile, url: "https://repositorio.ifsp.edu.br/items/aa21f9b0-d67d-45aa-bade-5a81918eae4d" },
+               ]} 
+                />
 
             <ProjectCard
               numero="02"
@@ -165,8 +170,7 @@ export default function Home() {
                   dados operacionais em visibilidade real para gestão do negócio.
                 </>
               }
-              image="/icons/Extensao.svg"
-              icon={LuGithub}
+              image="/icons/logo_ifmais_empreendedor.jpg"
               link=""
             />
           </div>
@@ -180,9 +184,7 @@ export default function Home() {
               title="Presidente — Associação Atlética Acadêmica Arthur Chiodi"
               period="2024"
               description="Liderança de equipe, gestão financeira e orçamentária, negociação com fornecedores e acompanhamento de indicadores para tomada de decisão. Responsável pela condução estratégica e operacional da Atlética ao longo do mandato."
-              icon={Trophy}
-              link=""
-            />
+            /> 
           </div>
         </section>
 
@@ -212,7 +214,7 @@ export default function Home() {
           <div className="max-w-xl text-left md:text-left" data-aos="fade-left">
             <h2 className="relative flex items-center gap-2 text-3xl font-extrabold text-stone-950 mb-4">
               Sobre{" "}
-              <span className="ml-1" style={{ color: "#6E00B3" }}>Mim</span>!
+              <span className="ml-1 text-primary">Mim</span>!
               <Image
                 src="/icons/Star.svg"
                 alt="Estrela"
@@ -244,7 +246,7 @@ export default function Home() {
               <div className="flex items-center gap-2 justify-center md:justify-start mb-3">
                 <h2 className="text-3xl font-extrabold text-stone-950 mt-20">
                   Entre em{" "}
-                  <span style={{ color: "#6E00B3" }}>Contato</span>!
+                  <span className="text-primary">Contato</span>
                 </h2>
                 <Image
                   src="/icons/Star.svg"

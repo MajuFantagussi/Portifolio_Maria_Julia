@@ -1,29 +1,51 @@
 import { GraduationCap } from "lucide-react";
 
-export default function ExtensionCard({ title, period, description, icon: Icon = GraduationCap, link }) {
+export default function ExtensionCard({
+  title,
+  period,
+  description,
+  icon: Icon = GraduationCap,
+  links = [],
+}) {
   return (
-    <div className="group bg-neutral-50 border-2 border-stone-950 rounded-3xl p-6 flex items-start justify-between shadow-md hover:shadow-lg hover:bg-white transition-shadow">
+    <div className="group bg-white border-2 border-transparent rounded-3xl p-6 flex items-start justify-between shadow-md hover:shadow-xl hover:border-[#6E00B3] transition-all duration-300">
+
       <div className="flex-1">
-        {/* título em roxo principal */}
-        <h3 className="font-bold mb-1" style={{ color: "#6E00B3" }}>{title}</h3>
-        <p className="italic text-stone-950 text-base mb-3">{period}</p>
-        <p className="text-stone-950 text-sm leading-relaxed">{description}</p>
-        {link && (
-          <a
-            href="https://www.sbv.ifsp.edu.br/component/content/article/138-noticias-publicadas/pagina-inicial/arquivadas/2034-alunos-do-bacharelado-em-ci%C3%AAncia-da-computa%C3%A7%C3%A3o-participam-de-concurso-cultural"
-            target="_blank"
-            className="font-bold underline underline-offset-4"
-            style={{ color: "#9333EA" }}
-          >
-            {link}
-          </a>
-        )}
+        <h3 className="font-bold mb-2 text-[#6E00B3]">
+          {title}
+        </h3>
+
+        <p className="italic text-stone-600 text-base mb-3">
+          {period}
+        </p>
+
+        <p className="text-stone-700 text-sm leading-relaxed">
+          {description}
+        </p>
       </div>
 
-      <div className="bg-neutral-50 border-2 border-stone-950 rounded-full w-14 h-14 flex items-center justify-center ml-4 p-2 group-hover:bg-white">
-        {/* ícone em roxo principal */}
-        <Icon className="w-6 h-6" style={{ color: "#6E00B3" }} />
+      {links.length > 0 && (
+        <div className="flex gap-3 ml-4">
+          {links.map(({ icon: LinkIcon, url }, i) => (
+            <a
+              key={i}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-stone-300 bg-white hover:bg-[#6E00B3] transition-all duration-300"
+            >
+              <LinkIcon className="w-6 h-6 text-[#6E00B3] hover:text-white" />
+            </a>
+          ))}
+        </div>
+      )}
+
+      <div className="ml-4">
+        <div className="w-14 h-14 flex items-center justify-center rounded-full border-2 border-stone-300 bg-white hover:bg-[#6E00B3] transition-all duration-300">
+          <Icon className="w-6 h-6 text-[#6E00B3] hover:text-white" />
+        </div>
       </div>
+
     </div>
   );
 }

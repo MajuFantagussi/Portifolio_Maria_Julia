@@ -1,0 +1,37 @@
+import { SiPython } from "react-icons/si";
+
+const SkillCard = ({ icon: Icon = SiPython, name, link }) => {
+  const content = (
+    <div
+      className={`group bg-neutral-50 border-2 rounded-3xl 
+      p-4 md:p-6 flex flex-col items-center justify-center gap-2 md:gap-3 
+      hover:shadow-lg transition-all cursor-pointer aspect-square`}
+      style={{ borderColor: "#6E00B3" }}
+      onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#a282b7")}
+      onMouseLeave={e => (e.currentTarget.style.backgroundColor = "")}
+    >
+      <Icon
+        className="w-12 h-12 transition-colors group-hover:text-white"
+        style={{ color: "#6E00B3" }}
+      />
+      <span className="text-sm font-medium text-gray-700 text-center transition-colors group-hover:text-white">
+        {name}
+      </span>
+    </div>
+  );
+
+  return link ? (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full h-full"
+    >
+      {content}
+    </a>
+  ) : (
+    content
+  );
+};
+
+export default SkillCard;

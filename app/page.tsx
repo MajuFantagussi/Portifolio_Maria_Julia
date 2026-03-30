@@ -155,7 +155,7 @@ export default function Home() {
               title="Presidente — Associação Atlética Acadêmica Arthur Chiodi"
               period="2024"
               description="Atuação em trabalho voluntário com foco em liderança e gestão, sendo responsável pela condução estratégica e operacional da Atlética. Gerenciei equipe multidisciplinar, organizei eventos e campanhas, além de atuar no controle financeiro e tomada de decisão baseada em indicadores. Desenvolvi habilidades de comunicação, negociação e resolução de problemas em ambientes dinâmicos e colaborativos."
-              image={""}
+              image={"/img/Atletica.png"}
               type="Trabalho Voluntário"        
               />
 
@@ -174,7 +174,7 @@ export default function Home() {
                 <>
                   <b>TaskRep</b> é um aplicativo mobile desenvolvido como <b>Trabalho de Conclusão de Curso</b>, com foco
                   em organização de tarefas e controle de despesas. O projeto envolveu <b>modelagem relacional de dados</b>,
-                  mapeamento de <b>casos de uso</b>, levantamento de requisitos e definição de <b>métricas e indicadores</b>
+                  mapeamento de <b>casos de uso</b>, levantamento de requisitos e definição de <b>métricas e indicadores</b>,
                   para suporte à tomada de decisão.
                 </>
               }
@@ -224,10 +224,10 @@ export default function Home() {
             </h2>
             <br />
             <p className="text-stone-900 leading-relaxed mb-4">
-              Oi! Sou a MJ, formada em Ciência da Computação pelo IFSP. Minha paixão está em trabalhar com dados —
+              Oi! Sou a Maria Julia Fantagussi, formada em Ciência da Computação pelo IFSP. Minha paixão está em trabalhar com dados —
               desde a construção de pipelines e modelagem até dashboards que contam histórias e ajudam times a
               tomar melhores decisões. Tive a oportunidade de colocar isso em prática na Bosch, onde trabalhei com
-              ETL, Power BI e automação em projetos reais.
+              ETL, Power BI e automação em projetos.
             </p>
             <p className="text-stone-900 leading-relaxed">
               Sou comunicativa, analítica e gosto de resolver problemas. Tenho inglês avançado e estou sempre

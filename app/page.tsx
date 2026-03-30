@@ -9,9 +9,11 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 import Header from "@/components/Header";
 import EducationCard from '@/components/cards/EducationCard';
-import ExtensionCard from "@/components/cards/ExtensionCard";
+import JobCard from "@/components/cards/JobCard";
 import SkillCard from "@/components/cards/SkillCard";
 import ProjectCard from "@/components/cards/ProjectCard";
+import AcademicCard from "@/components/cards/AcademicCard";
+
 
 // CSS Import
 import './globals.css';
@@ -20,14 +22,15 @@ import './globals.css';
 import { GraduationCap, Briefcase, Trophy, BarChart2, Database } from "lucide-react";
 import {
   SiPython, SiPostgresql, SiMysql, SiGit, SiJavascript, SiDatabricks, SiFigma,
-  SiNextdotjs
+  SiNextdotjs,
 } from "react-icons/si";
 import { FaFile, FaFileExcel, FaInstagram, FaJava, FaLanguage, FaLink, FaReact, FaSignLanguage, FaWhatsapp } from "react-icons/fa";
-import { LuGithub, LuLinkedin } from "react-icons/lu";
+import { LuBriefcase, LuGithub, LuLink, LuLinkedin } from "react-icons/lu";
 
 import GitHubButton from "@/components/button/GitHubButtton";
 import LinkedinButton from "@/components/button/LinkedinButton";
 import Link from "next/link";
+import { ImTextColor } from "react-icons/im";
 
 export default function Home() {
 
@@ -60,10 +63,7 @@ export default function Home() {
               {/* Subtítulo */}
               <h2 className="text-lg md:text-xl font-semibold mb-6" style={{ color: "#a282b7" }}> Analista de Dados Jr. </h2>
               <p className="text-stone-900 leading-relaxed mb-8">
-                Desde 2022, venho construindo minha trajetória na área de dados, unindo formação em Ciência da
-                Computação com experiência prática em ETL, modelagem analítica e visualização de dados.
-                Tenho perfil hands-on e foco em transformar dados em decisões de negócio — atuando em parceria
-                com times de tecnologia e negócio.
+               Atuo na área de dados com foco em Business Intelligence, desenvolvendo dashboards, indicadores e automações que apoiam a tomada de decisão. Minha formação em Ciência da Computação sustenta uma atuação analítica e estruturada, aliada à experiência prática com tratamento e organização de dados. Tenho perfil hands-on e colaboro diretamente com áreas de negócio e tecnologia para transformar dados em valor.
               </p>
             </div>
 
@@ -126,13 +126,39 @@ export default function Home() {
             EXPERIÊNCIA PROFISSIONAL
           </h4>
           <div className="space-y-6">
-            <ExtensionCard
-              title="Estagiária em PMO — Dados e Indicadores · Bosch Campinas"
-              period="Fev/2025 – Fev/2026"
-              description="Participação em processos ETL com consolidação e validação de dados de múltiplas fontes. Estruturação de bases analíticas como fonte da verdade (SSOT) para consumo padronizado entre áreas. Desenvolvimento de dashboards em Power BI com KPIs operacionais e financeiros para suporte à tomada de decisão gerencial. Automação com VBA, reduzindo 75% do tempo operacional e gerando economia anual de R$170 mil."
-              icon={Briefcase}
-
+            <JobCard
+              title="Estagiária em PMO — Dados e Indicadores"
+              period="BOSCH · Fev/2025 – Fev/2026 "
+              description="Atuação em projetos de dados com foco na construção e manutenção de pipelines ETL, modelagem analítica e estruturação de bases confiáveis (SSOT). Desenvolvimento e reestruturação de dashboards em Power BI com DAX, aprimorando a visualização e interpretação de indicadores de negócio. Implementação de automações, incluindo a criação de uma planilha de apontamento que reduziu em 75% o tempo de atividades operacionais. Experiência com validação e tratamento de dados, garantindo qualidade analítica e contribuindo diretamente para a geração de insights e suporte à tomada de decisão."              icon={Briefcase}
+              image="/img/Bosch.jpeg"
             />
+          </div>
+        </section>
+
+        {/* EXTENSÕES */}
+        <section className="mb-16" data-aos="fade-up">
+          <h2 className="text-3xl text-center font-bold text-stone-950 mb-6">
+            Iniciativas Acadêmicas
+          </h2>
+
+          <div className="space-y-6">
+
+            <AcademicCard
+              title="IF + Empreendedor — Sistemas Financeiros"
+              period="2024 - 2025"
+              description="Atuação em projeto de extensão voltado ao desenvolvimento de soluções financeiras para microempreendedores, com foco na estruturação de dados e apoio à gestão do negócio. Participei da modelagem e implementação de banco de dados relacional em PostgreSQL, além da organização de indicadores financeiros e análise de fluxo de caixa. O projeto teve como objetivo transformar dados operacionais em informações estratégicas, contribuindo para maior controle e tomada de decisão dos usuários."
+              image="/img/logo_ifmais_empreendedor.jpg"
+              type="Projeto de Extensão"
+            />
+
+            <AcademicCard
+              title="Presidente — Associação Atlética Acadêmica Arthur Chiodi"
+              period="2024"
+              description="Atuação em trabalho voluntário com foco em liderança e gestão, sendo responsável pela condução estratégica e operacional da Atlética. Gerenciei equipe multidisciplinar, organizei eventos e campanhas, além de atuar no controle financeiro e tomada de decisão baseada em indicadores. Desenvolvi habilidades de comunicação, negociação e resolução de problemas em ambientes dinâmicos e colaborativos."
+              image={""}
+              type="Trabalho Voluntário"        
+              />
+
           </div>
         </section>
 
@@ -158,33 +184,6 @@ export default function Home() {
                 { icon: FaFile, url: "https://repositorio.ifsp.edu.br/items/aa21f9b0-d67d-45aa-bade-5a81918eae4d" },
                ]} 
                 />
-
-            <ProjectCard
-              numero="02"
-              title="IF + Empreendedor — Sistemas Financeiros para Microempreendedores"
-              description={
-                <>
-                  Projeto de extensão com desenvolvimento de sistemas financeiros para microempreendedores.
-                  Envolveu <b>modelagem e implementação de banco de dados relacional em PostgreSQL</b>,
-                  estruturação de indicadores financeiros e análise de fluxo de caixa — transformando
-                  dados operacionais em visibilidade real para gestão do negócio.
-                </>
-              }
-              image="/icons/logo_ifmais_empreendedor.jpg"
-              link=""
-            />
-          </div>
-        </section>
-
-        {/* Seção de Liderança */}
-        <section className="mb-16" data-aos="fade-up">
-          <h2 className="text-3xl text-center font-bold text-stone-950 mb-6 section-spacing">Liderança</h2>
-          <div className="space-y-6">
-            <ExtensionCard
-              title="Presidente — Associação Atlética Acadêmica Arthur Chiodi"
-              period="2024"
-              description="Liderança de equipe, gestão financeira e orçamentária, negociação com fornecedores e acompanhamento de indicadores para tomada de decisão. Responsável pela condução estratégica e operacional da Atlética ao longo do mandato."
-            /> 
           </div>
         </section>
 
@@ -194,7 +193,7 @@ export default function Home() {
           {/* Coluna da Esquerda - Foto */}
           <div className="relative inline-block" data-aos="fade-right">
             <Image
-              src="/icons/Foto1.png"
+              src="/img/Perfil_Maju.jpeg"
               alt="Maria Julia"
               width={400}
               height={400}
@@ -202,8 +201,8 @@ export default function Home() {
             />
             <span className="absolute bottom-4 right-0">
               <Image
-                src="/icons/Flower.svg"
-                alt="Flor"
+                src="/img/Coração.webp"
+                alt="Coração"
                 width={120}
                 height={120}
               />
@@ -216,7 +215,7 @@ export default function Home() {
               Sobre{" "}
               <span className="ml-1 text-primary">Mim</span>!
               <Image
-                src="/icons/Star.svg"
+                src="/img/Estrela.webp"
                 alt="Estrela"
                 width={100}
                 height={100}
@@ -244,17 +243,9 @@ export default function Home() {
             {/* Coluna Esquerda */}
             <div className="max-w-lg text-left md:text-left">
               <div className="flex items-center gap-2 justify-center md:justify-start mb-3">
-                <h2 className="text-3xl font-extrabold text-stone-950 mt-20">
-                  Entre em{" "}
-                  <span className="text-primary">Contato</span>
+                <h2 className="text-3xl font-extrabold text-stone-950 mt-20" style={{ color: "#9333EA" }}>
+                  Entre em Contato
                 </h2>
-                <Image
-                  src="/icons/Star.svg"
-                  alt="Estrela decorativa"
-                  width={100}
-                  height={100}
-                  className="top-3 right-75"
-                />
               </div>
 
               <p className="text-stone-950 text-sm leading-relaxed my-6">

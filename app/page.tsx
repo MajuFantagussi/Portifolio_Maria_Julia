@@ -27,10 +27,8 @@ import {
 import { FaFile, FaFileExcel, FaInstagram, FaJava, FaLanguage, FaLink, FaReact, FaSignLanguage, FaWhatsapp } from "react-icons/fa";
 import { LuBriefcase, LuGithub, LuLink, LuLinkedin } from "react-icons/lu";
 
-import GitHubButton from "@/components/button/GitHubButtton";
-import LinkedinButton from "@/components/button/LinkedinButton";
 import Link from "next/link";
-import { ImTextColor } from "react-icons/im";
+import { LiaGithub } from "react-icons/lia";
 
 export default function Home() {
 
@@ -164,9 +162,13 @@ export default function Home() {
 
         {/* Seção de Projetos */}
         <section className="mb-20" id="projetos" data-aos="fade-up">
-          <h2 className="text-3xl text-center font-bold text-stone-950 mb-6 section-spacing">Projetos</h2>
+          <h2 className="text-3xl text-center font-bold text-stone-950 mb-6 section-spacing">
+            Projetos
+          </h2>
 
           <div className="space-y-6">
+            
+            {/* Projeto 1 */}
             <ProjectCard
               numero="01"
               title="TaskRep — Aplicativo Mobile de Organização de Tarefas e Despesas (TCC)"
@@ -179,11 +181,41 @@ export default function Home() {
                 </>
               }
               image="/icons/TaskRep.png"
-               links={[
-                { icon: SiFigma, url: "https://www.figma.com/design/cYhZP7gImfa9wHJ72raSd8/Prot%C3%B3tipo-de-Telas?node-id=0-1&m=dev&t=qRxtz1rmjDmGR0lj-1" },
-                { icon: FaFile, url: "https://repositorio.ifsp.edu.br/items/aa21f9b0-d67d-45aa-bade-5a81918eae4d" },
-               ]} 
-                />
+              links={[
+                {
+                  icon: SiFigma,
+                  url: "https://www.figma.com/design/cYhZP7gImfa9wHJ72raSd8/Prot%C3%B3tipo-de-Telas?node-id=0-1&m=dev&t=qRxtz1rmjDmGR0lj-1",
+                },
+                {
+                  icon: FaFile,
+                  url: "https://repositorio.ifsp.edu.br/items/aa21f9b0-d67d-45aa-bade-5a81918eae4d",
+                },
+              ]}
+            />
+
+            {/* Projeto 2 */}
+            <ProjectCard
+              numero="02"
+              title="HR Admission Automation — Pipeline de Validação de Dados para Onboarding"
+              description={
+              <>
+                Pipeline de automação desenvolvido em <b>Python</b> para validação de dados de admissão,
+                combinando <b>RPA</b> e <b>APIs REST</b> para garantir consistência e confiabilidade das informações.
+                O projeto realiza <b>validação de CEP</b> via automação de navegador e API (ViaCEP),
+                validação de <b>dados bancários</b> (Brasil API) e verificação de <b>feriados nacionais</b>,
+                aplicando regras de negócio para classificação de prioridade. Inclui <b>cross-validation entre fontes</b>
+                e geração automatizada de relatório final em Excel.
+              </>
+            }
+              image="/img/Pipeline_HR.png" // ou coloca uma imagem específica se quiser
+              links={[
+                {
+                  icon: LiaGithub,
+                  url: "https://github.com/MajuFantagussi/hr-admission-automation",
+                },
+              ]}
+            />
+
           </div>
         </section>
 

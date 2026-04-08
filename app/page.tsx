@@ -70,7 +70,7 @@ export default function Home() {
               <div className="absolute inset-0 rounded-full border-2 border-gray-50"></div>
               {/* TODO: substitua pelo seu ícone em /icons/Icon.svg */}
               <Image
-                src="/img/Ilustration.png"
+                src="/img/ilustration.webp"
                 alt="Maria Julia"
                 width={550}
                 height={550}
@@ -128,7 +128,7 @@ export default function Home() {
               title="Estagiária em PMO — Dados e Indicadores"
               period="BOSCH · Fev/2025 – Fev/2026 "
               description="Atuação em projetos de dados com foco na construção e manutenção de pipelines ETL, modelagem analítica e estruturação de bases confiáveis (SSOT). Desenvolvimento e reestruturação de dashboards em Power BI com DAX, aprimorando a visualização e interpretação de indicadores de negócio. Implementação de automações, incluindo a criação de uma planilha de apontamento que reduziu em 75% o tempo de atividades operacionais. Experiência com validação e tratamento de dados, garantindo qualidade analítica e contribuindo diretamente para a geração de insights e suporte à tomada de decisão."              icon={Briefcase}
-              image="/img/Bosch.jpeg"
+              image="/img/bosch.webp"
             />
           </div>
         </section>
@@ -145,7 +145,7 @@ export default function Home() {
               title="IF + Empreendedor — Sistemas Financeiros"
               period="2024 - 2025"
               description="Atuação em projeto de extensão voltado ao desenvolvimento de soluções financeiras para microempreendedores, com foco na estruturação de dados e apoio à gestão do negócio. Participei da modelagem e implementação de banco de dados relacional em PostgreSQL, além da organização de indicadores financeiros e análise de fluxo de caixa. O projeto teve como objetivo transformar dados operacionais em informações estratégicas, contribuindo para maior controle e tomada de decisão dos usuários."
-              image="/img/logo_ifmais_empreendedor.jpg"
+              image="/img/logo-ifmais-empreendedor.webp"
               type="Projeto de Extensão"
             />
 
@@ -153,7 +153,7 @@ export default function Home() {
               title="Presidente — Associação Atlética Acadêmica Arthur Chiodi"
               period="2024"
               description="Atuação em trabalho voluntário com foco em liderança e gestão, sendo responsável pela condução estratégica e operacional da Atlética. Gerenciei equipe multidisciplinar, organizei eventos e campanhas, além de atuar no controle financeiro e tomada de decisão baseada em indicadores. Desenvolvi habilidades de comunicação, negociação e resolução de problemas em ambientes dinâmicos e colaborativos."
-              image={"/img/Atletica.png"}
+              image={"/img/atletica.webp"}
               type="Trabalho Voluntário"        
               />
 
@@ -207,7 +207,7 @@ export default function Home() {
                 e geração automatizada de relatório final em Excel.
               </>
             }
-              image="/img/Pipeline_HR.png" // ou coloca uma imagem específica se quiser
+              image="/img/pipeline-hr.webp" // ou coloca uma imagem específica se quiser
               links={[
                 {
                   icon: LiaGithub,
@@ -225,7 +225,7 @@ export default function Home() {
           {/* Coluna da Esquerda - Foto */}
           <div className="relative inline-block" data-aos="fade-right">
             <Image
-              src="/img/Perfil_Maju.jpeg"
+              src="/img/perfil-maju.webp"
               alt="Maria Julia"
               width={400}
               height={400}
@@ -233,7 +233,7 @@ export default function Home() {
             />
             <span className="absolute bottom-4 right-0">
               <Image
-                src="/img/Coração.webp"
+                src="/img/coracao.webp"
                 alt="Coração"
                 width={120}
                 height={120}
@@ -247,7 +247,7 @@ export default function Home() {
               Sobre{" "}
               <span className="ml-1 text-primary">Mim</span>!
               <Image
-                src="/img/Estrela.webp"
+                src="/img/estrela.webp"
                 alt="Estrela"
                 width={100}
                 height={100}

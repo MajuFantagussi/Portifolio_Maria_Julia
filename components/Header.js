@@ -34,13 +34,7 @@ export default function Header() {
           
           {/* Logo */}
           <a href="#top" className="flex items-center cursor-pointer">
-            <Image
-              src="/img/maju.webp"
-              alt="Maju"
-              width={120}
-              height={40}
-              className="h-10 w-auto object-contain"
-            />
+            <span className="font-bold text-xl text-[#9333ea]" style={{fontSize: "30px"}}>Maju.</span>
           </a>
 
           {/* Links Desktop */}

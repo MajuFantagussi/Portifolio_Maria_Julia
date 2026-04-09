@@ -13,7 +13,7 @@ export default function AcademicCard({
     shadow-sm hover:shadow-md transition-all duration-300">
 
       {/* LINHA LATERAL */}
-      <div className="absolute left-0 top-6 bottom-6 w-[3px] bg-[#9333EA] rounded-full opacity-20 group-hover:opacity-60 " />
+      <div className="absolute left-0 top-6 bottom-6 w-[3px] bg-[#9333EA] rounded-full opacity-20 group-hover:opacity-60 transition-all" />
 
       {/* TAG */}
       <span className="absolute -top-3 right-6 bg-[#9333EA] text-white text-xs px-3 py-1 rounded-full shadow-md">

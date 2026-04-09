@@ -48,9 +48,9 @@ export default function ProjectCard({
         <Image
           src={image}
           alt={title}
-          width={300}
-          height={300}
-          className="object-contain w-60 md:w-[300px]"
+          width={200}
+          height={200}
+          className="object-contain w-60 md:w-[200px]"
         />
       </div>
 

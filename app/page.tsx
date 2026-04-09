@@ -23,6 +23,7 @@ import { GraduationCap, Briefcase, Trophy, BarChart2, Database } from "lucide-re
 import {
   SiPython, SiPostgresql, SiMysql, SiGit, SiJavascript, SiDatabricks, SiFigma,
   SiNextdotjs,
+  SiTypescript,
 } from "react-icons/si";
 import { FaFile, FaFileExcel, FaInstagram, FaJava, FaLanguage, FaLink, FaReact, FaSignLanguage, FaWhatsapp } from "react-icons/fa";
 import { LuBriefcase, LuGithub, LuLink, LuLinkedin } from "react-icons/lu";
@@ -100,6 +101,8 @@ export default function Home() {
             <SkillCard icon={FaJava} name="Java" link="" />
             <SkillCard icon={FaReact} name="React" link="" />
             <SkillCard icon={SiNextdotjs} name="Next.js" link="" />
+            <SkillCard icon={SiTypescript} name="TypeScript" link="" />
+
           </div>
         </div>
         </section>

@@ -180,7 +180,7 @@ export default function Home() {
                   para suporte à tomada de decisão.
                 </>
               }
-              image="/icons/TaskRep.png"
+              image="/img/taskrep.webp"
               links={[
                 {
                   icon: SiFigma,

@@ -48,7 +48,7 @@ export default function Header() {
 
           {/* Botão Currículo Desktop */}
           <div className="hidden lg:block">
-            <CurriculoButton icon={Download} link="/docs/Maria_Julia_CV.pdf" />
+            <CurriculoButton icon={Download} link="/docs/maria-julia.pdf"/>
           </div>
 
           {/* Botão Hambúrguer */}

@@ -56,7 +56,7 @@ export default function ProjectCard({
 
       {/* Ícones de link */}
       {normalizedLinks.length > 0 && (
-        <div className="flex gap-3 mt-6 md:mt-0 justify-center md:justify-start md:flex-col">
+      <div className="flex gap-3 mt-6 md:mt-0 justify-center w-full md:w-auto md:flex-col">
           {normalizedLinks.map(({ icon: LinkIcon, url }, i) => (
             <a
               key={i}

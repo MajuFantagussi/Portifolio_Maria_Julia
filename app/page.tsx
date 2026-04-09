@@ -83,28 +83,32 @@ export default function Home() {
 
         {/* Seção de Habilidades */}
         <section className="mb-16" id="habilidades" data-aos="fade-up">
-          <h2 className="text-3xl text-center font-bold text-stone-950 mb-6 section-spacing">Habilidades</h2>
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-3xl text-center font-bold text-stone-950 mb-6 section-spacing">Habilidades</h2>
 
-        <div className="space-y-4 md:space-y-6">
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3 md:gap-6">
-            <SkillCard icon={Database} name="SQL" link="" />
-            <SkillCard icon={SiPython} name="Python" link="" />
-            <SkillCard icon={BarChart2} name="Power BI / DAX" link="" />
-            <SkillCard icon={SiPostgresql} name="PostgreSQL" link="" />
-            <SkillCard icon={SiMysql} name="MySQL" link="" />
-            <SkillCard icon={SiDatabricks} name="Databricks" link="" />
-            <SkillCard icon={Database} name="Data Modeling" link="" />
-            <SkillCard icon={FaFileExcel} name="Excel" link="" />
-            <SkillCard icon={SiFigma} name="Figma" link="" />
-            <SkillCard icon={FaLanguage} name="Inglês Avançado" link="" />
-            <SkillCard icon={SiJavascript} name="JavaScript" link="" />
-            <SkillCard icon={FaJava} name="Java" link="" />
-            <SkillCard icon={FaReact} name="React" link="" />
-            <SkillCard icon={SiNextdotjs} name="Next.js" link="" />
-            <SkillCard icon={SiTypescript} name="TypeScript" link="" />
+            <div className="flex justify-center">
+              <div className="grid grid-cols-5 gap-3">
+                <SkillCard icon={Database}     name="SQL"              link="" />
+                <SkillCard icon={SiPython}     name="Python"           link="" />
+                <SkillCard icon={BarChart2}    name="Power BI / DAX"   link="" />
+                <SkillCard icon={SiPostgresql} name="PostgreSQL"       link="" />
+                <SkillCard icon={SiMysql}      name="MySQL"            link="" />
 
+                <SkillCard icon={SiDatabricks} name="Databricks"       link="" />
+                <SkillCard icon={Database}     name="Data Modeling"    link="" />
+                <SkillCard icon={FaFileExcel}  name="Excel"            link="" />
+                <SkillCard icon={SiFigma}      name="Figma"            link="" />
+                <SkillCard icon={FaLanguage}   name="Inglês Avançado"  link="" />
+
+                <SkillCard icon={SiJavascript} name="JavaScript"       link="" />
+                <SkillCard icon={FaJava}       name="Java"             link="" />
+                <SkillCard icon={FaReact}      name="React"            link="" />
+                <SkillCard icon={SiNextdotjs}  name="Next.js"          link="" />
+                <SkillCard icon={SiTypescript} name="TypeScript"       link="" />
+              </div>
+            </div>
           </div>
-        </div>
+
         </section>
 
         {/* Seção de Experiências */}

@@ -28,7 +28,7 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="bg-neutral-50/70 backdrop-blur-md sticky top-0 z-50">
+    <header className= "bg-[#FAFAFA] sticky top-0 z-50">
       <nav className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           

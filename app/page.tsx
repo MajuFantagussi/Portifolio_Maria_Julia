@@ -87,7 +87,7 @@ export default function Home() {
             <h2 className="text-3xl text-center font-bold text-stone-950 mb-6 section-spacing">Habilidades</h2>
 
             <div className="flex justify-center">
-              <div className="grid grid-cols-5 gap-3">
+              <div className="grid grid-cols-4 md:grid-cols-5 gap-2 md:gap-3">
                 <SkillCard icon={Database}     name="SQL"              link="" />
                 <SkillCard icon={SiPython}     name="Python"           link="" />
                 <SkillCard icon={BarChart2}    name="Power BI / DAX"   link="" />
@@ -320,7 +320,7 @@ export default function Home() {
           onMouseLeave={e => (e.currentTarget.style.backgroundColor = "white")}
         >
           <a
-            href="" // TODO: link do repositório do portfólio
+            href="https://github.com/MajuFantagussi/Portifolio_Maria_Julia" // TODO: link do repositório do portfólio
             target="_blank"
             rel="noopener noreferrer"
           >

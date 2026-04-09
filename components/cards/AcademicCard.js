@@ -9,7 +9,7 @@ export default function AcademicCard({
 }) {
   return (
     <div className="group relative bg-white border border-stone-100 rounded-3xl p-6 
-    flex gap-6 items-start
+    flex flex-col md:flex-row gap-4 md:gap-6 items-center md:items-start
     shadow-sm hover:shadow-md transition-all duration-300">
 
       {/* LINHA LATERAL */}
@@ -20,16 +20,16 @@ export default function AcademicCard({
         {type}
       </span>
 
-      {/* IMAGEM (ESQUERDA) */}
+      {/* IMAGEM */}
       {image && (
         <div className="flex-shrink-0">
           <div className="bg-gray-100 p-2 rounded-2xl">
             <Image
               src={image}
               alt={title}
-              width={150}
-              height={150}
-              className="rounded-xl object-cover w-[100px] h-[100px] md:w-[120px] md:h-[120px]"
+              width={120}
+              height={120}
+              className="rounded-xl object-cover w-[80px] h-[80px] md:w-[120px] md:h-[120px]"
             />
           </div>
         </div>
@@ -37,14 +37,12 @@ export default function AcademicCard({
 
       {/* TEXTO */}
       <div className="flex-1 text-center md:text-left">
-        <h3 className="font-semibold text-lg text-stone-900 group-hover:text-stone-900 transition-colors">
+        <h3 className="font-semibold text-lg text-stone-900 transition-colors">
           {title}
         </h3>
-
         <p className="text-sm text-stone-500 mb-2">
           {period}
         </p>
-
         <p className="text-sm text-stone-700 leading-relaxed">
           {description}
         </p>

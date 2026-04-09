@@ -35,11 +35,11 @@ export default function Header() {
           {/* Logo */}
           <a href="#top" className="flex items-center cursor-pointer">
             <Image
-              src="/img/Maju.png"
+              src="/img/maju.webp"
               alt="Maju"
-              width={48}
-              height={48}
-              className="w-22 h-22"
+              width={120}
+              height={40}
+              className="h-10 w-auto object-contain"
             />
           </a>
 

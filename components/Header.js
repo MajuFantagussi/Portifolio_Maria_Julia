@@ -48,7 +48,7 @@ export default function Header() {
 
           {/* Botão Currículo Desktop */}
           <div className="hidden lg:block">
-            <CurriculoButton icon={Download} link="/docs/maria-julia.pdf"/>
+            <CurriculoButton icon={Download} link="/docs/maria-julia-cv.pdf"/>
           </div>
 
           {/* Botão Hambúrguer */}
@@ -78,7 +78,7 @@ export default function Header() {
             <a href="#contato" onClick={handleLinkClick} className="text-stone-950 hover:text-[#6E00B3] transition-colors">Contato</a>
 
             <div className="pt-2">
-              <CurriculoButton icon={Download} link="/docs/Maria_Julia_CV.pdf" />
+              <CurriculoButton icon={Download} link="/docs/maria-julia-cv.pdf" />
             </div>
           </div>
         </div>

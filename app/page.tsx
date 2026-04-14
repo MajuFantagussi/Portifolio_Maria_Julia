@@ -87,8 +87,7 @@ export default function Home() {
             <h2 className="text-3xl text-center font-bold text-stone-950 mb-6 section-spacing">Habilidades</h2>
 
             <div className="flex justify-center">
-              <div className="grid grid-cols-4 md:grid-cols-5 gap-2 md:gap-3">
-                <SkillCard icon={Database}     name="SQL"              link="" />
+              <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">                <SkillCard icon={Database}     name="SQL"              link="" />
                 <SkillCard icon={SiPython}     name="Python"           link="" />
                 <SkillCard icon={BarChart2}    name="Power BI / DAX"   link="" />
                 <SkillCard icon={SiPostgresql} name="PostgreSQL"       link="" />
@@ -226,17 +225,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção Sobre Mim */}
-        <section className="relative flex flex-col md:flex-row items-center justify-center gap-36 md:py-16 bg-gray-50 overflow-hidden" id="sobre">
-
+       {/* Seção Sobre Mim */}
+        <section className="relative flex flex-col md:flex-row items-center justify-center gap-10 md:gap-36 py-10 md:py-16 bg-gray-50 overflow-hidden text-center md:text-left" id="sobre">
+          
           {/* Coluna da Esquerda - Foto */}
-          <div className="relative inline-block" data-aos="fade-right">
+          <div className="relative inline-block order-2 md:order-1" data-aos="fade-right">
             <Image
               src="/img/perfil-maju.webp"
               alt="Maria Julia"
               width={400}
               height={400}
-              className="object-cover w-[290px] md:w-[320px] lg:w-[360px] h-auto rounded-2xl min-w-[290px] min-h-[290px]"
+              className="object-cover w-[220px] sm:w-[260px] md:w-[320px] lg:w-[360px] h-auto rounded-2xl"
             />
             <span className="absolute bottom-4 right-0">
               <Image
@@ -249,8 +248,8 @@ export default function Home() {
           </div>
 
           {/* Coluna da Direita - Texto */}
-          <div className="max-w-xl text-left md:text-left" data-aos="fade-left">
-            <h2 className="relative flex items-center gap-2 text-3xl font-extrabold text-stone-950 mb-4">
+          <div className="max-w-xl order-1 md:order-2 text-center md:text-left" data-aos="fade-left">
+            <h2 className="relative flex items-center justify-center md:justify-start gap-2 text-3xl font-extrabold text-stone-950 mb-4">
               Sobre{" "}
               <span className="ml-1 text-primary">Mim</span>!
               <Image
@@ -273,6 +272,7 @@ export default function Home() {
               buscando aprender — seja em novas ferramentas de dados ou em desafios que me tirem da zona de conforto.
             </p>
           </div>
+
         </section>
 
         {/* Seção de Contato */}
